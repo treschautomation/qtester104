@@ -720,7 +720,7 @@ void MainWindow::slot_dataIndication(iec_obj *obj, unsigned numpoints) {
 
       case iec104_class::M_PS_NA_1: // 38
         sprintf(buf,
-                "%s%s%s%s%s ST %d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d CH %d%d%d%d "
+                "%s%s%s%s%s ST %d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d CH %d%d%d%d "
                 "%d%d%d%d %d%d%d%d %d%d%d%d [1-16]",
                 obj->ov ? "ov " : "", obj->bl ? "bl " : "",
                 obj->nt ? "nt " : "", obj->sb ? "sb " : "",
@@ -741,7 +741,7 @@ void MainWindow::slot_dataIndication(iec_obj *obj, unsigned numpoints) {
       case iec104_class::M_BO_NA_1: // 7
         sprintf(buf,
                 "%s%s%s%s%s ST %d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d "
-                "%d%d%d% d%d%d%d %d%d%d%d [1-32]",
+                "%d%d%d%d %d%d%d%d %d%d%d%d [1-32]",
                 obj->ov ? "ov " : "", obj->bl ? "bl " : "",
                 obj->nt ? "nt " : "", obj->sb ? "sb " : "",
                 obj->iv ? "iv " : "", obj->bsi.st1, obj->bsi.st2, obj->bsi.st3,
@@ -751,7 +751,7 @@ void MainWindow::slot_dataIndication(iec_obj *obj, unsigned numpoints) {
                 obj->bsi.st16, obj->bsi.st17, obj->bsi.st18, obj->bsi.st19,
                 obj->bsi.st20, obj->bsi.st21, obj->bsi.st22, obj->bsi.st23,
                 obj->bsi.st24, obj->bsi.st25, obj->bsi.st26, obj->bsi.st27,
-                obj->bsi.st28, obj->bsi.st29, obj->bsi.st31, obj->bsi.st32);
+                obj->bsi.st28, obj->bsi.st29, obj->bsi.st30, obj->bsi.st31, obj->bsi.st32);
         break;
 
       case iec104_class::M_ME_TD_1: // 34

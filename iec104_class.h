@@ -251,7 +251,6 @@ private:
   static const int gi_retry_time =
       45; // wait time to retry when requested a GI and not responded
   unsigned short test_command_count = 0; // test command counter
-  char logPointBuf[15000] = "     ";
 
 protected:
   void LogFrame(char *frame, int size, bool is_send);
