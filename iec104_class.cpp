@@ -1222,7 +1222,7 @@ void iec104_class::parseAPDU(iec_apdu* papdu, int sz, bool accountandrespond) {
           piecarr[i].iv = pobj->iv;
           if (mLog.isLogging()) {
             char buf[1000];
-            sprintf(buf, "%s%s%s%s%s ST %d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d %d%d%d% d%d%d%d %d%d%d%d [1-32]",
+            sprintf(buf, "%s%s%s%s%s ST %d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d [1-32]",
                     pobj->ov ? "ov " : "", pobj->bl ? "bl " : "", pobj->nt ? "nt " : "", pobj->sb ? "sb " : "", pobj->iv ? "iv " : "",
                     pobj->bsi.st1,
                     pobj->bsi.st2,
@@ -1253,6 +1253,7 @@ void iec104_class::parseAPDU(iec_apdu* papdu, int sz, bool accountandrespond) {
                     pobj->bsi.st27,
                     pobj->bsi.st28,
                     pobj->bsi.st29,
+                    pobj->bsi.st30,
                     pobj->bsi.st31,
                     pobj->bsi.st32
                    );
@@ -1300,7 +1301,7 @@ void iec104_class::parseAPDU(iec_apdu* papdu, int sz, bool accountandrespond) {
           piecarr[i].timetag = pobj->time;
           if (mLog.isLogging()) {
             char buf[1000];
-            sprintf(buf, "%s%s%s%s%s ST %d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d %d%d%d% d%d%d%d %d%d%d%d [1-32]",
+            sprintf(buf, "%s%s%s%s%s ST %d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d %d%d%d%d [1-32]",
                     pobj->ov ? "ov " : "", pobj->bl ? "bl " : "", pobj->nt ? "nt " : "", pobj->sb ? "sb " : "", pobj->iv ? "iv " : "",
                     pobj->bsi.st1,
                     pobj->bsi.st2,
@@ -1331,6 +1332,7 @@ void iec104_class::parseAPDU(iec_apdu* papdu, int sz, bool accountandrespond) {
                     pobj->bsi.st27,
                     pobj->bsi.st28,
                     pobj->bsi.st29,
+                    pobj->bsi.st30,
                     pobj->bsi.st31,
                     pobj->bsi.st32
                    );
